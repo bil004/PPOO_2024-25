@@ -1,0 +1,17 @@
+Progettare e implementare una classe Matrix per rappresentare matrici m × n (con m righe e n colonne) di numeri interi. Dotare la classe di:
+
+• metodi get e set che permettano di leggere/scrivere un elemento della matrice date le sue coordinate. 
+  Ad esempio, m.get(0,0) deve restituire l’elemento che si trova nell’angolo in alto a sinistra della matrice m;
+
+• metodi rows e columns che ritornino rispettivamente il numero di righe e di colonne della matrice;
+
+• un metodo add tale che m1.add(m2) ritorni la matrice ottenuta sommando m1 ed m2;
+
+• un metodo mul tale che m1.mul(m2) ritorni la matrice ottenuta moltiplicando m1 con m2;
+
+• un metodo pow tale che m.pow(n) ritorni la potenza n-esima della matrice quadrata m. 
+  Si ricorda che la potenza 0-esima di m è la matrice identità che ha lo stesso numero di righe/colonne di m.
+
+Specificare le pre-condizioni di ogni costruttore/metodo con una clausola assert opportuna.
+
+N.B. --> L'esercizio è stato svolto seguendo il metodo delle Security Leaks
