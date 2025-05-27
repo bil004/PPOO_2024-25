@@ -32,4 +32,4 @@ Questa repository raccoglie materiale, esercizi, esempi svolti e spiegazioni rel
 
 ---
 
-> **Nota:** La repository è pensata come supporto completo per studenti e docenti del corso PPOO, ma può essere utile anche a chi vuole approfondire la programmazione a oggetti in Java con esempi pratici e spiegazioni chiare.
+> **Nota:** La repository potrebbe contenere errori![alt text](image.png)
