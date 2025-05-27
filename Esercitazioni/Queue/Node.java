@@ -1,6 +1,6 @@
-package EsempioNodi;
+package Queue;
 
-public class Node<T>{
+public class Node <T>{
     private T elem;
     private Node<T> next;
 

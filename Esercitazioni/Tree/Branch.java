@@ -1,4 +1,4 @@
-package Alberi;
+package Tree;
 
 public class Branch extends Tree {
     private Tree left;
@@ -11,58 +11,71 @@ public class Branch extends Tree {
         this.right = right;
     }
 
+    @Override
+    public int size() {
+        return 1 + left.size() + right.size();
+    }
+
+    @Override
     public boolean isEmpty() {
         return false;
     }
 
+    @Override
     public int max() {
         return right.isEmpty() ? elem : right.max();
     }
 
-    public int size() {
-        return 1 + right.size() + left.size();
-    }
-
+    @Override
     public boolean contains(int elem) {
-        if (this.elem == elem) 
+        if (elem == this.elem)
             return true;
 
-        if (elem > this.elem)
+        if (elem < this.elem)
             return left.contains(elem);
         else
             return right.contains(elem);
     }
 
+    @Override
     public Tree insert(int elem) {
-        if (this.elem < elem)
+        if (elem < this.elem)
             left = left.insert(elem);
-        else if (this.elem > elem)
+        else
             right = right.insert(elem);
-        
+
         return this;
     }
 
+    @Override
     public Tree remove(int elem) {
-        if (this.elem == elem) {
+        if (elem == this.elem) {
             if (left.isEmpty())
                 return right;
-            
-            if (right.isEmpty()) 
+            else if (right.isEmpty())
                 return left;
+            else {
+                this.elem = left.max();
+                left = left.remove(this.elem);
+                return this;
+            }
         }
-        
-        if (this.elem < elem) {
+
+        if (elem < this.elem) {
             left = left.remove(elem);
             return this;
         }
 
-        // L'elemento da rimuovere si trova a destra
         right = right.remove(elem);
         return this;
     }
 
-    // Metodo che gestisce la parte NON pubblica della conversione in String. Non
-    // forniamo spiegazioni sul suo funzionamento, non e' essenziale.
+    @Override
+    protected int height() {
+        return 1 + Math.max(left.height(), right.height());
+    }
+
+    @Override
     protected String toStringAux(String prefix, String root, String left, String right) {
         return this.left.toStringAux(prefix + left, "   /", "   ", "  ¦")
                 + "\n" + prefix + root + "[" + elem + "]" + "\n" +
