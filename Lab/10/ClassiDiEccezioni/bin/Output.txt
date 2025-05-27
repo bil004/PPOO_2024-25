@@ -1,0 +1,5 @@
+Indice: 0 = 54, inserito true
+Indice: 1 = 6, inserito true
+Indice: 2 = -98, inserito true
+Indice: 3 = 98, inserito true
+Indice: 4 = 10, inserito true
