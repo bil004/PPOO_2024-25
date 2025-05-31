@@ -1,4 +1,4 @@
-package EsempioEsame;
+package Bank;
 
 public class BankAccountYoung extends BankAccount {
     private final double limit = 500;

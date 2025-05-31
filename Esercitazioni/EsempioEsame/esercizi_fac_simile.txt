@@ -1,0 +1,66 @@
+Esercizi Fac-Simile basati sul modello BankAccount
+
+1. Classe LibraryBook
+--------------------
+Scrivere una classe LibraryBook che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero di libri creati (e che diventa poi identificatore di ogni singolo libro)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il titolo del libro (String)
+  ○ l'autore del libro (String)
+● due costruttori, uno che inizializzi titolo e autore, l'altro senza argomenti che inizializzi almeno un attributo dinamico con il valore di una variabile statica (ad esempio id)
+● metodi get per gli attributi titolo e autore (e metodo set solamente per il titolo)
+● metodi equals() e toString() specifici per la classe
+● metodi domain-specific:
+  ○ borrow() per prendere in prestito il libro
+  ○ returnBook() per restituire il libro
+● metodo statico domain-specific:
+  ○ getNumBooks() che restituisce il numero di libri creati
+● advanced:
+  ○ scrivere una sottoclasse ReferenceBook che ridefinisce il metodo borrow() per impedire il prestito (ad esempio lancia un'eccezione o stampa un messaggio)
+
+--------------------------------------------------------------------------------
+
+2. Classe Car
+-------------
+Scrivere una classe Car che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero di auto create (e che diventa poi identificatore di ogni singola auto)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il modello dell'auto (String)
+  ○ la velocità attuale (double)
+● due costruttori, uno che inizializzi modello e velocità, l'altro senza argomenti che inizializzi almeno un attributo dinamico con il valore di una variabile statica (ad esempio id)
+● metodi get per gli attributi modello e velocità (e metodo set solamente per il modello)
+● metodi equals() e toString() specifici per la classe
+● metodi domain-specific:
+  ○ accelerate(double amount) per aumentare la velocità
+  ○ brake(double amount) per diminuire la velocità (non può scendere sotto zero)
+● metodo statico domain-specific:
+  ○ getNumCars() che restituisce il numero di auto create
+● advanced:
+  ○ scrivere una sottoclasse ElectricCar che ridefinisce il metodo accelerate() per gestire la carica della batteria (ad esempio decrementa la carica ad ogni accelerazione)
+
+--------------------------------------------------------------------------------
+
+3. Classe Student
+-----------------
+Scrivere una classe Student che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero di studenti creati (e che diventa poi identificatore di ogni singolo studente)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il nome dello studente (String)
+  ○ la media voti (double)
+● due costruttori, uno che inizializzi nome e media, l'altro senza argomenti che inizializzi almeno un attributo dinamico con il valore di una variabile statica (ad esempio id)
+● metodi get per gli attributi nome e media (e metodo set solamente per il nome)
+● metodi equals() e toString() specifici per la classe
+● metodi domain-specific:
+  ○ addGrade(double grade) per aggiungere un voto e aggiornare la media
+● metodo statico domain-specific:
+  ○ getNumStudents() che restituisce il numero di studenti creati
+● advanced:
+  ○ scrivere una sottoclasse GraduateStudent che ridefinisce il metodo addGrade() per considerare crediti extra (ad esempio aggiunge un bonus alla media)
+
+--------------------------------------------------------------------------------

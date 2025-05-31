@@ -1,4 +1,4 @@
-package EsempioEsame;
+package Bank;
 
 public class BankAccount {
     static int counter = 0;
