@@ -17,7 +17,8 @@ Scrivere una classe LibraryBook che contenga i seguenti elementi:
   ○ returnBook() per restituire il libro
 ● metodo statico domain-specific:
   ○ getNumBooks() che restituisce il numero di libri creati
-● advanced:
+
+● ADVANCED:
   ○ scrivere una sottoclasse ReferenceBook che ridefinisce il metodo borrow() per impedire il prestito (ad esempio lancia un'eccezione o stampa un messaggio)
 
 --------------------------------------------------------------------------------
@@ -39,7 +40,8 @@ Scrivere una classe Car che contenga i seguenti elementi:
   ○ brake(double amount) per diminuire la velocità (non può scendere sotto zero)
 ● metodo statico domain-specific:
   ○ getNumCars() che restituisce il numero di auto create
-● advanced:
+
+● ADVANCED:
   ○ scrivere una sottoclasse ElectricCar che ridefinisce il metodo accelerate() per gestire la carica della batteria (ad esempio decrementa la carica ad ogni accelerazione)
 
 --------------------------------------------------------------------------------
@@ -60,7 +62,80 @@ Scrivere una classe Student che contenga i seguenti elementi:
   ○ addGrade(double grade) per aggiungere un voto e aggiornare la media
 ● metodo statico domain-specific:
   ○ getNumStudents() che restituisce il numero di studenti creati
-● advanced:
+
+● ADVANCED:
   ○ scrivere una sottoclasse GraduateStudent che ridefinisce il metodo addGrade() per considerare crediti extra (ad esempio aggiunge un bonus alla media)
 
 --------------------------------------------------------------------------------
+
+4. Classe Movie
+--------------
+Scrivere una classe Movie che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero di film creati (e che diventa poi identificatore di ogni singolo film)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il titolo del film (String)
+  ○ la durata in minuti (int)
+● due costruttori, uno che inizializzi titolo e durata, l'altro senza argomenti che inizializzi almeno un attributo dinamico con il valore di una variabile statica (ad esempio id)
+● metodi get per gli attributi titolo e durata (e metodo set solamente per il titolo)
+● metodi equals() e toString() specifici per la classe
+● metodi domain-specific:
+  ○ play() per simulare la riproduzione del film (ad esempio stampa un messaggio)
+  ○ pause() per mettere in pausa la riproduzione
+● metodo statico domain-specific:
+  ○ getNumMovies() che restituisce il numero di film creati
+
+● ADVANCED:
+  ○ scrivere una sottoclasse Documentary che ridefinisce il metodo play() per aggiungere informazioni educative (ad esempio stampa un messaggio aggiuntivo)
+
+--------------------------------------------------------------------------------
+
+5. Classe Smartphone
+-------------------
+Scrivere una classe Smartphone che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero di smartphone creati (e che diventa poi identificatore di ogni singolo smartphone)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il modello dello smartphone (String)
+  ○ la carica della batteria in percentuale (int)
+● due costruttori, uno che inizializzi modello e carica, l'altro senza argomenti che inizializzi almeno un attributo dinamico con il valore di una variabile statica (ad esempio id)
+● metodi get per gli attributi modello e carica (e metodo set solamente per il modello)
+● metodi equals() e toString() specifici per la classe
+● metodi domain-specific:
+  ○ charge(int amount) per aumentare la carica della batteria (fino a 100)
+  ○ use(int amount) per diminuire la carica della batteria (non può scendere sotto zero)
+● metodo statico domain-specific:
+  ○ getNumSmartphones() che restituisce il numero di smartphone creati
+
+● ADVANCED:
+  ○ scrivere una sottoclasse GamingSmartphone che ridefinisce il metodo use() per consumare più batteria durante il gioco
+
+--------------------------------------------------------------------------------
+
+6. Classe EventBooking
+----------------------
+Scrivere una classe EventBooking che contenga i seguenti elementi:
+
+● una variabile statica intera "counter" che tenga traccia del numero totale di prenotazioni effettuate (e che diventa poi identificatore di ogni singola prenotazione)
+● tre attributi di tipo private per memorizzare:
+  ○ identificatore "id", inizializzato usando la variabile statica counter
+  ○ il nome dell’evento (String) "eventName"
+  ○ il nome della persona che ha prenotato (String) "attendeeName"
+● due costruttori:
+  ○ uno che inizializzi eventName e attendeeName
+  ○ uno che inizializzi solo eventName, impostando un nome generico per il partecipante
+● nota: counter deve essere sempre aggiornato/incrementato
+● metodi get per gli attributi eventName e attendeeName (e metodo set solo per attendeeName)
+● metodi equals() e toString()
+● metodi domain-specific:
+  ○ confirmBooking() che stampa un messaggio di conferma della prenotazione
+  ○ cancelBooking() che riduce il numero totale di prenotazioni e annulla la prenotazione
+● metodo statico domain-specific:
+  ○ getNumBookings() che restituisce il numero di prenotazioni totali
+
+● ADVANCED:
+  ○ scrivere una sottoclasse EventBookingVIP che aggiunga:
+    ○  un attributo vipBenefits (String) per descrivere i benefici VIP
+    ○  la ridefinizione di confirmBooking() per includere i vantaggi VIP

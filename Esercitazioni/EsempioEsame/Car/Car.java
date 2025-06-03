@@ -7,10 +7,10 @@ public class Car {
     private double speed;
 
     public Car(String model, double speed) {
-        counter++;
-        id = counter;
         this.model = model;
         this.speed = speed;
+        counter++;
+        id = counter;
     }
 
     public Car() {

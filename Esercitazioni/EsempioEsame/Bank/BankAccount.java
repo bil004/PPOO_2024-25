@@ -7,17 +7,17 @@ public class BankAccount {
     private double total;
 
     public BankAccount(String name, double total) {
-        this.id = counter;
         this.name = name;
         this.total = total;
         counter++;
+        id = counter;
     }
 
     public BankAccount(String name) {
-        this.id = counter;
         this.name = name;
         this.total = 0.0;
         counter++;
+        id = counter;
     }
 
     public String getName() {

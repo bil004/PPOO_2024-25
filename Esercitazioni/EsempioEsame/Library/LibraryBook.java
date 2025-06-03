@@ -2,18 +2,19 @@ package Library;
 
 public class LibraryBook {
     static int counter = 0;
-    private int id = counter;
+    private int id;
     private String title, author;
 
     public LibraryBook(String title, String author) {
         this.title = title;
         this.author = author;
         counter++;
+        id = counter;
     }
 
     public LibraryBook() {
-        id = counter;
         counter++;
+        id = counter;
     }
 
     public String getTitle() {
