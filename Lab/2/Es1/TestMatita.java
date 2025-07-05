@@ -13,7 +13,6 @@ public class TestMatita {
       m.tempera();
       System.out.println(" nuova lunghezza punta = " + m.getPunta());
       System.out.println(" nuova lunghezza stelo = " + m.getStelo());
-      System.out
-          .println("Stampo la matita m. Ottengo \"Matita@\" seguito dall'indirizzo dell'oggetto (in esadecimale): " + m);
+      System.out.println("Stampo la matita m. Ottengo \"Matita@\" seguito dall'indirizzo dell'oggetto (in esadecimale): " + m);
     }
 }  

@@ -1,12 +1,13 @@
 package Es1;
 
 public class Matita {
-    public static int minStelo = 10, maxStelo = 200, maxPunta = 5;
-    private int stelo = 10, punta = 1;
+    public static final int minStelo = 10, maxStelo = 200, maxPunta = 5;
+    private int stelo, punta;
     
-    public Matita (int maxStelo) {
-        assert (maxStelo <= Matita.maxStelo);
-        Matita.maxStelo = maxStelo;
+    public Matita (int stelo) {
+        assert (stelo <= maxStelo);
+        this.stelo = stelo;
+        punta = maxPunta;
     }
 
     public int getPunta() {
