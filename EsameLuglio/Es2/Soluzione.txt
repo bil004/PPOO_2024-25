@@ -1,0 +1,6 @@
+| Domanda | Corretta? | Spiegazione                                                             |
+| ------: | --------- | ----------------------------------------------------------------------- |
+|       1 | ❌        | Senza `m1()` in `A`, `obj.m1()` in `C` non compila                      |
+|       2 | ❌        | `m1(A)` non esiste, errore compilazione                                 |
+|       3 | ❌        | `B z = new A();` è errato: non puoi assegnare superclassi a sottoclassi |
+|       4 | ✅        | Stampa `C.m1` seguito da `B.m1`                                         |
