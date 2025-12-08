@@ -1,0 +1,33 @@
+Esercizio: Rappresentazioni finali dell'albero binario durante e dopo remove(3)
+
+-----
+
+1. Rappresentazione finale al "CHECK POINT 1" (durante remove(3)):
+
+Struttura dell'albero (Logica):
+L'albero, al momento del "CHECK POINT 1", è ancora nella sua configurazione precedente la modifica del nodo radice, ma la variabile locale `elem` nel metodo `remove` (non l'elemento del nodo `this.elem`) ha già il valore che verrà copiato (2). La stampa avviene immediatamente dopo aver calcolato questo valore.
+
+      3 (Branch_3, this nel metodo remove)
+     / \
+    1   4 (Branch_4)
+   / \   / \
+  L   2 L   L
+     / \
+    L   L
+
+(Dove L sta per Leaf e 2 è il Branch_2 con elem=2).
+
+-----
+
+2. Rappresentazione finale al "CHECK POINT 2":
+
+Struttura dell'albero (Logica):
+L'albero è stato modificato: il nodo radice Branch_3 ha cambiato il suo valore da 3 a 2, e il nodo Branch_2 (che conteneva il 2) è stato rimosso, lasciando al suo posto una Leaf.
+
+      2 (Branch_3, ora con valore 2)
+     / \
+    1   4 (Branch_4)
+   / \   / \
+  L   L L   L
+
+(Dove L è una foglia, e le quattro foglie nell'albero finale sono Leaf_L2, Leaf_R4, Leaf_L3, Leaf_R3 rispettivamente).
